@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP WINGS - Linares</title>
+  <link rel="stylesheet" href="disinicio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <header class="Barrainicio">
+    <img src="img/logo.jpg" alt="LogoTopWings" height="70">
+    <nav class="menuu">
+      <a href="#Bienvenidos"><strong>Bienvenidos</strong></a>
+      <a href="#Sdom"><strong>Envíos</strong></a>
+      <a href="#Dire"><strong>Ubicación</strong></a>
+      <a href="#menufo"><strong>Menú</strong></a>
+    </nav>
+  </header>
+
+  <!-- Sección de bienvenida -->
+  <section class="hero animado" id="Bienvenidos">
+    <div class="overlay"></div>
+    <img src="img/mesastp.jpg" alt="mesastpwngs" class="background-img">
+    <div class="hero-content">
+      <h1>TP WNG'S</h1>
+      <p>Las mejores alitas y boneless en Linares, NL. Sabor, ambiente y pasión por lo que hacemos. ¡Ven a visitarnos!</p>
+    </div>
+  </section>
+
+  <!-- Sección de envíos -->
+  <section class="tpcasa animado" id="Sdom">
+
+    <h2>¡TP WNG'S hasta tu casa!</h2>
+    <p>Te ofrecemos el servicio a domicilio para que no tengas que salir. Solo llama y ordena, o visita nuestra página de Facebook.</p>
+    <a href="https://www.facebook.com" target="_blank" class="btn_vermenuuu">Visitar</a>
+  </section>
+
+  <!-- Sección de menú -->
+  <section class="menufoto animado" id="menufo">
+
+    <img src="img/menu.png" alt="menuimagen">
+  </section>
+
+  <!-- Sección de ubicación -->
+  <section class="ContDireccion animado" id="Dire">
+
+    <h2>Conoce nuestra ubicación</h2>
+    <div class="content">
+      <div class="info">
+        <p>Dr. Carlos García Rodríguez #600 ote. Col.Centro<br>Plaza la Estación local 3, Centro, 67710 Linares, N.L</p>
+        <p>Tel. 821 121 7018</p>
+        <p>Se agregarán $30 extra al pedido por envío</p>
+        <p>Horario: Lunes-Domingo de 12:00 pm a 11:00 am</p>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.530500015083!2d-99.56528572567774!3d24.864325077926726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867cedb6a3933db3%3A0x2ec3a0c3d213e561!2zVFBXTkfigJlT!5e1!3m2!1ses!2smx!4v1735600687914!5m2!1ses!2smx" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ContFooter">
+    <p>Visítanos también en nuestras redes sociales para conocer una mayor variedad de platillos que ofrecemos</p>
+  </footer>
+
+
+
+
+  <script>
+    // Detectar elementos que se animarán
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('mostrar');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+  
+    // Seleccionar secciones
+    document.querySelectorAll('.animado').forEach(el => {
+      el.classList.add('oculto'); // Ocultarlo de inicio
+      observer.observe(el);
+    });
+  </script>
+  
+</body>
+
+</html>
